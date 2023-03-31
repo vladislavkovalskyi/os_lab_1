@@ -12,4 +12,4 @@
 * ✅ Готово!
 
 ## Відскануйте *цей* буклет
-<image src="Markers_table.png" alt="Markers table">
+<image src="Markers.png" alt="Markers table">
