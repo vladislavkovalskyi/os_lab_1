@@ -22,8 +22,7 @@
 
 <body style='margin : 0px; overflow: hidden; font-family: Monospace; user-select: none; pointer-events: none;'>
 
-    <div id="access"
-        style="top: 0; left: 0; right:0; bottom: 0; background: #000; position: absolute; user-select: all; pointer-events: all;">
+    <div id="access" style="top: 0; left: 0; right:0; bottom: 0; background: #000; position: absolute; user-select: all; pointer-events: all;">
         <div id="text-wrapper" style="top: 50%; left: 50%; position: absolute; color: #fff; transform: translate(-50%, -50%); text-align: center;
                 text-transform: uppercase; font-family: Arial, Helvetica, sans-serif; font-weight: 400; line-height: 1.5em; font-size: large; white-space: nowrap;
                 user-select: none; pointer-events: none;
@@ -37,10 +36,8 @@
     <div id="loader" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: #fff; pointer-events: none; user-select: none;
         transition: all .2s linear; display: none;">
         <div style="left: 50%; top: 50%; position: absolute; transform: translate(-50%, -50%); text-align: center; width: 130px; height: 165px;
-            font-family: Arial, Helvetica, sans-serif; font-weight: 400; line-height: 1.5em; font-size: large;"
-            class="spinner-wrapper">
-            <img style="width: 130px; height: 130px; pointer-events: none; user-select: none;" src="data/spin.gif"
-                alt="spin gif">
+            font-family: Arial, Helvetica, sans-serif; font-weight: 400; line-height: 1.5em; font-size: large;" class="spinner-wrapper">
+            <img style="width: 130px; height: 130px; pointer-events: none; user-select: none;" src="data/spin.gif" alt="spin gif">
             <br>
             Loading...
         </div>
@@ -156,29 +153,29 @@
 
                 // Масив назв файлів .patt. Масив заповнюється в порядку додавання маркерів
                 // якщо замість .patt було додано баркод, на його місце в масив додається порожній рядок
-                const patternNames = ["", "", ""];
+                const patternNames = ["" ,"" ,""];
                 // Масив баркодів, заповнюється одночасно з масивом патернів
                 // якщо замість баркоду був доданий .patt, на його місце масив додається -1
-                const patternBarcode = [1, 2, 3];
+                const patternBarcode = [1 ,2 ,3];
                 // Масив типів контенту кожного маркера, заповнюється значеннями: зображення, модель, відео
-                const modes = ["image", "image", "image"];
+                const modes = ["image" ,"image" ,"image"];
                 // Масив файлів моделей, якщо немає моделі буде додано порожній рядок
-                const modelFiles = ["", "", ""];
+                const modelFiles = ["" ,"" ,""];
                 // Масив файлів зображень, якщо немає зображення буде додано також порожній рядок
-                const imageFiles = ["01.png", "02.png", "03.png"];
+                const imageFiles = ["1_image.jpg" ,"2_image.jpg" ,"3_image.jpg"];
                 // Масив файлів відео, якщо немає відео буде ще один порожній рядок
-                const videoFiles = ["", "", ""];
+                const videoFiles = ["" ,"" ,""];
                 // Масив файлів аудіо, якщо немає аудіо буде так само порожній рядок
-                const audioFiles = ["1.mp3", "2.mp3", "3.mp3"];
+                const audioFiles = ["1.mp3" ,"2.mp3" ,"3.mp3"];
                 // Масив опцій повтору аудіо та відео контенту, по дефолту для всіх буде false
-                const repeatOptions = ["false", "false", "false"];
-
+                const repeatOptions = ["false" ,"false" ,"false"];
+  
                 // Створюємо масив для всіх маркерів
                 const markerRoots = [];
                 for (let i = 0; i < 3; i++) {
                     markerRoots[i] = new THREE.Group();
                 }
-
+  
                 // Проходимо по кожному маркеру з масиву і додаємо його в головний контейнер
                 for (let i = 0; i < 3; i++) {
                     mainContainer.add(markerRoots[i]);
@@ -252,7 +249,7 @@
                         // Якщо контент під маркер - це відео
                         case 'video':
                             // Оголошуємо площину під відео
-                            let geometry2 = new THREE.PlaneBufferGeometry(1.6, 0.9);
+                            let geometry2 = new THREE.PlaneBufferGeometry(1.6 , 0.9);
                             // Оголошуємо та завантажуємо відео
                             let video = document.createElement('video');
                             video.src = `${videoFiles[i]}`;
